@@ -1,0 +1,2 @@
+dataset_size,train_size,test_size,features,best_model,best_auc,top_features
+4240,3392,848,35,logistic_regression,0.6944830783495596,"[{'feature': 'num__age', 'mean_shap': 0.40232005343600935}, {'feature': 'num__currentSmoker', 'mean_shap': 0.21063833620102698}, {'feature': 'num__age_smoking', 'mean_shap': 0.19240711575530492}, {'feature': 'num__cigsPerDay', 'mean_shap': 0.13803088936720323}, {'feature': 'num__sysBP', 'mean_shap': 0.11960920019901045}]"
