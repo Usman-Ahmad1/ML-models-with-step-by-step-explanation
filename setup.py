@@ -1,0 +1,36 @@
+﻿from setuptools import setup, find_packages
+
+setup(
+    name="healthcare-risk-predictor",
+    version="1.0.0",
+    author="Your Name",
+    description="Explainable ML for cardiovascular risk prediction",
+    packages=find_packages(),
+    include_package_data=True,
+    python_requires=">=3.8",
+    install_requires=[
+        'numpy>=1.24.3',
+        'pandas>=2.0.3',
+        'scikit-learn>=1.3.0',
+        'xgboost>=1.7.6',
+        'lightgbm>=4.0.0',
+        'catboost>=1.2.0',
+        'imbalanced-learn>=0.10.1',
+        'joblib>=1.3.1',
+        'matplotlib>=3.7.2',
+        'seaborn>=0.12.2',
+        'plotly>=5.15.0',
+        'streamlit>=1.25.0',
+        'shap>=0.41.0',
+        'optuna>=3.2.0',
+        'python-dotenv>=1.0.0',
+    ],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Healthcare Industry',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+    ],
+)
