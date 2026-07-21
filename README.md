@@ -2,7 +2,7 @@
 
 **An explainable machine learning system for predicting 10-year cardiovascular disease (CVD) risk** using the Framingham Heart Study dataset. Built with XGBoost, SHAP, and Streamlit for production-ready clinical decision support.
 
-**Live Demo**:https://ml-models-with-step-by-step-explanation-qr4erv2fiv8mjww4rhj3cd.streamlit.app/
+**Live Demo**: [Streamlit Cloud](https://your-app-url.streamlit.app) *(replace with actual link)*
 
 ## 🎯 Problem Statement
 
@@ -13,6 +13,17 @@ Cardiovascular disease is the leading cause of death globally. Early identificat
 - Complex non-linear risk factors
 - Need for interpretability in clinical settings
 - Missing data in real-world records
+
+## Screenshots
+
+### Overview Page
+![Overview Page](assets/overview.png)
+
+### Risk Predictor
+![Risk Predictor](assets/predictor.png)
+
+### What-If Analysis
+![What-If Analysis](assets/what-if.png)
 
 ## 🛠️ Solution
 
@@ -31,38 +42,36 @@ Cardiovascular disease is the leading cause of death globally. Early identificat
 
 ## 📊 Results
 
-| Model                | CV AUC | Test AUC | Status    |
-|----------------------|--------|----------|-----------|
-| Logistic Regression  | 0.731  | 0.701    | ✅ Best   |
-| Random Forest        | 0.711  | 0.666    | ✅        |
-| XGBoost              | 0.695  | 0.633    | ✅        |
-| LightGBM             | 0.689  | 0.636    | ✅        |
+| Model                | CV AUC     | Test AUC | Test AUPRC | F1 Score | Precision | Recall |
+|----------------------|------------|----------|------------|----------|-----------|--------|
+| Logistic Regression  | 0.737 ± 0.015 | 0.698 | 0.295 | 0.361 | 0.255 | 0.620 |
+| Random Forest        | 0.939 ± 0.008 | 0.663 | 0.251 | 0.293 | 0.266 | 0.326 |
+| XGBoost              | 0.955 ± 0.007 | 0.623 | 0.217 | 0.180 | 0.254 | 0.140 |
+| LightGBM             | 0.950 ± 0.008 | 0.623 | 0.221 | 0.237 | 0.289 | 0.202 |
 
-**Top 5 Risk Factors (SHAP)**
+**Best Model**: Logistic Regression (Test AUC: 0.698)
 
-1. Age (0.402)
-2. Current Smoker (0.211)
-3. Age × Smoking (0.192)
-4. Cigarettes/Day (0.138)
-5. Systolic BP (0.120)
+**Top Risk Factors** (from SHAP analysis):
+1. Age
+2. Systolic BP
+3. Smoking status
+4. Total Cholesterol
+5. BMI / Glucose
 
 ## 🚀 Features
 
 ### Dashboard Pages
-
-| Page          | Function                                      |
-|---------------|-----------------------------------------------|
-| 📋 Overview   | Dataset stats, model performance, top features |
-| 🔮 Predictor  | Individual risk prediction with SHAP explanation |
-| 📊 Explanations | Global SHAP plots & clinical rules           |
-| 🧪 What-If    | Interactive risk factor exploration           |
-| 📈 Performance| ROC curves & confusion matrices               |
+- **📋 Overview**: Dataset stats, model performance, top features
+- **🔮 Predictor**: Individual risk prediction with SHAP explanation
+- **📊 Explanations**: Global SHAP plots & clinical rules
+- **🧪 What-If**: Interactive risk factor exploration
+- **📈 Performance**: ROC curves & confusion matrices
 
 ### Clinical Decision Support
 - **Risk Score**: Probability (0-100%)
 - **Risk Category**: Very Low / Low / Moderate / High
-- **Top Contributors**: Identifies key risk factors
-- **Recommendations**: Actionable clinical guidance
+- **Top Contributors**: Identifies key risk factors with SHAP
+- **Recommendations**: Actionable clinical guidance (e.g., "Smoking cessation strongly recommended")
 
 ## 🛠️ Tech Stack
 
@@ -80,16 +89,16 @@ Cardiovascular disease is the leading cause of death globally. Early identificat
 ```bash
 X-GBoost-portfolio/
 ├── app/                    # Streamlit dashboard
-│   ├── main.py            # Main app with navigation
-│   └── pages/             # Individual pages
+│   ├── main.py
+│   └── pages/
 ├── src/
-│   ├── data/              # Data loading & preprocessing
-│   ├── models/            # Model definitions
-│   ├── explainability/    # SHAP analysis & rules
-│   └── utils/             # Metrics & visualization
-├── data/raw/              # Dataset
-├── models/                # Saved models (.pkl)
-├── notebooks/             # EDA and modeling notebooks
-├── requirements.txt       # Dependencies
-├── README.md
-└── .gitignore
+│   ├── data/
+│   ├── models/
+│   ├── explainability/
+│   └── utils/
+├── data/raw/               # Framingham dataset
+├── models/                 # Saved .pkl models
+├── assets/                 # Screenshots
+├── notebooks/              # EDA & experiments
+├── requirements.txt
+└── README.md
