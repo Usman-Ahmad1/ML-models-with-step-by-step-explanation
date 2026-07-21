@@ -14,7 +14,7 @@ Cardiovascular disease is the leading cause of death globally. Early identificat
 - Need for interpretability in clinical settings
 - Missing data in real-world records
 
-## Screenshots
+## vissualization
 
 ### Overview Page
 <img width="680" height="317" alt="Screenshot 2026-07-21 153021" src="https://github.com/user-attachments/assets/b52973cc-c18e-42c6-be73-6833ac9381ca" />
