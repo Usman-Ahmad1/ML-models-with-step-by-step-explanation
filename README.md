@@ -2,7 +2,7 @@
 
 **An explainable machine learning system for predicting 10-year cardiovascular disease (CVD) risk** using the Framingham Heart Study dataset. Built with XGBoost, SHAP, and Streamlit for production-ready clinical decision support.
 
-**Live Demo**: [Streamlit Cloud](https://your-app-url.streamlit.app) *(replace with actual link)*
+**Live Demo**: [Streamlit Cloud]((https://ml-models-with-step-by-step-explanation-qr4erv2fiv8mjww4rhj3cd.streamlit.app/)p) *(replace with actual link)*
 
 ## 🎯 Problem Statement
 
