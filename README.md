@@ -17,13 +17,16 @@ Cardiovascular disease is the leading cause of death globally. Early identificat
 ## Screenshots
 
 ### Overview Page
-![Overview Page](assets/overview.png)
+<img width="680" height="317" alt="Screenshot 2026-07-21 153021" src="https://github.com/user-attachments/assets/b52973cc-c18e-42c6-be73-6833ac9381ca" />
+
 
 ### Risk Predictor
-![Risk Predictor](assets/predictor.png)
+<img width="577" height="255" alt="Screenshot 2026-07-21 153157" src="https://github.com/user-attachments/assets/0ffbf1a1-8b96-4e08-acab-71358ca779b7" />
+
 
 ### What-If Analysis
-![What-If Analysis](assets/what-if.png)
+<img width="589" height="284" alt="Screenshot 2026-07-21 153606" src="https://github.com/user-attachments/assets/536eaf5b-57c6-4701-b5d9-972f72be5d01" />
+
 
 ## 🛠️ Solution
 
